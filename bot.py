@@ -6,7 +6,7 @@ import os
 import time  # ⬅️ Tambahkan ini untuk jeda waktu
 
 # Token bot dari @BotFather
-TOKEN = "7649537068:AAHFR3QUZCtCbI3lqyAu4K9tS04iS40ra34"
+TOKEN = os.getenv("BOT_TOKEN")
 PASSWORD = "acdc123"  # Ganti ke password lebih aman jika perlu
 
 # Lokasi proyekmu
