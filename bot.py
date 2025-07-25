@@ -3,6 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import subprocess
 import sys
 import os
+import time  # ⬅️ Tambahkan ini untuk jeda waktu
 
 # Token bot dari @BotFather
 TOKEN = "7649537068:AAHFR3QUZCtCbI3lqyAu4K9tS04iS40ra34"
@@ -34,9 +35,13 @@ async def start_web(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return await update.message.reply_text("❌ Akses ditolak. Password salah.")
     
     try:
-        run_be()
         run_fe()
+        await update.message.reply_text("⚙️ Menyalakan Frontend...")
+        time.sleep(2)
+        await update.message.reply_text("⚙️ Menyalakan Backend....")
+        run_be()
         await update.message.reply_text("✅ Frontend & Backend berhasil dinyalakan.")
+        await update.message.reply_text("🌐 Buka link berikut: http://localhost:5173/")
     except Exception as e:
         await update.message.reply_text(f"❌ Gagal menyalakan web: {e}")
 
