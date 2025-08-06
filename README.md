@@ -3,12 +3,12 @@ Proyek ini adalah sistem BOT untuk layanan Art and Cosmetic Dental Clinic. Terdi
 
 🚀 Cara Menjalankan Aplikasi
 
-python bot.py
+    python bot.py
 
 🌐 Akses Aplikasi
-Setelah dijalankan, buka browser dan akses:
+    Setelah dijalankan, buka browser dan akses:
 
-📎 http://localhost:5173/
+    📎 http://localhost:5173/
 
 🛑 Cara Mematikan Aplikasi
 1. Kembali ke terminal tempat bot.py dijalankan.
